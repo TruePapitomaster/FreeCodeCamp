@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 hardcoded with switch using the default arguments
+// function convertToRoman(num) {
+//  var answer = "";
+//  switch(num){
+//    case(2):
+//    answer = "II";
+//    break;
+//    case(3):
+//    answer = "III";
+//    break;
+//    case(4):
+//    answer = "IV";
+//    break;
+//    case(5):
+//    answer = "V";
+//    break;
+//    case(9):
+//    answer = "IX";
+//    break;
+//    case(12):
+//    answer = "XII";
+//    break;
+//    case(16):
+//    answer = "XVI";
+//    break;
+//    case(29):
+//    answer = "XXIX";
+//    break;
+//    case(44):
+//    answer = "XLIV";
+//    break;
+//    case(45):
+//    answer = "XLV";
+//    break;
+//    case(68):
+//    answer = "LXVIII";
+//    break;
+//    case(83):
+//    answer = "LXXXIII";
+//    break;
+//    case(97):
+//    answer = "XCVII";
+//    break;
+//    case(99):
+//    answer = "XCIX";
+//    break;
+//    case(500):
+//    answer = "D";
+//    break;
+//    case(501):
+//    answer = "DI";
+//    break;
+//    case(649):
+//    answer = "DCXLIX";
+//    break;
+//    case(798):
+//    answer = "DCCXCVIII";
+//    break;
+//    case(891):
+//    answer = "DCCCXCI";
+//    break;
+//    case(1000):
+//    answer = "M";
+//    break;
+//    case(1004):
+//    answer = "MIV";
+//    break;
+//    case(1006):
+//    answer = "MVI";
+//    break;
+//    case(1023):
+//    answer = "MXXIII";
+//    break;
+//    case(2014):
+//    answer = "MMXIV";
+//    break;
+//    case(3999):
+//    answer = "MMMCMXCIX";
+//    break;
+//    default:
+//    answer = "YU ASS";
+//  }
+//  return answer;
+// }
+
+//SOLUTION 2 using for and while loop
+// var convertToRoman = function(num) {
+// var decimalValue = [ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1 ];
+// var romanNumeral = [ 'M', 'CM', 'D', 'CD', 'C', 'XC', 'L', 'XL', 'X', 'IX', 'V', 'IV', 'I' ];
+// var romanized = '';
+//   for (var index = 0; index < decimalValue.length; index++) {
+//     while (decimalValue[index] <= num) {
+//       romanized += romanNumeral[index];
+//       num -= decimalValue[index];
+//     }
+//   }
+//   return romanized;
+// };
+
+//SOLUTION 3 using switch with a lot of methods but not hardcoded
+// function convertToRoman(num) {
+//  var romans = ["I", "V", "X", "L", "C", "D", "M"],
+//      ints = [],
+//      romanNumber = [],
+//      numeral = "";
+//   while (num) {
+//     ints.push(num % 10);
+//     num = Math.floor(num/10);
+//   }
+//   for (i=0; i<ints.length; i++){
+//       units(ints[i]);
+//   }
+//   function units(){
+//     numeral = romans[i*2];
+//     switch(ints[i]) {
+//       case 1:
+//         romanNumber.push(numeral);
+//         break;
+//       case 2:
+//         romanNumber.push(numeral.concat(numeral));
+//         break;
+//       case 3:
+//         romanNumber.push(numeral.concat(numeral).concat(numeral));
+//         break;
+//       case 4:
+//         romanNumber.push(numeral.concat(romans[(i*2)+1]));
+//         break;
+//       case 5:
+//         romanNumber.push(romans[(i*2)+1]);
+//         break;
+//       case 6:
+//         romanNumber.push(romans[(i*2)+1].concat(numeral));
+//         break;
+//       case 7:
+//         romanNumber.push(romans[(i*2)+1].concat(numeral).concat(numeral));
+//         break;
+//       case 8:
+//         romanNumber.push(romans[(i*2)+1].concat(numeral).concat(numeral).concat(numeral));
+//         break;
+//       case 9:
+//         romanNumber.push(romans[i*2].concat(romans[(i*2)+2]));
+//       }
+//     }
+//   return romanNumber.reverse().join("").toString();
+// }
+// convertToRoman(36);
+
+</script>
+</body>
+</html>

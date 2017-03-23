@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 map method
+// function rot13(str) {
+//   // Split str into a character array
+//   return str.split('')
+//   // Iterate over each character in the array
+//     .map.call(str, function(char) {
+//       // Convert char to a character code
+//       x = char.charCodeAt(0);
+//       // Checks if character lies between A-Z
+//       if (x < 65 || x > 90) {
+//         return String.fromCharCode(x);  // Return un-converted character
+//       }
+//       //N = ASCII 78, if the character code is less than 78, shift forward 13 places
+//       else if (x < 78) {
+//         return String.fromCharCode(x + 13);
+//       }
+//       // Otherwise shift the character 13 places backward
+//       return String.fromCharCode(x - 13);
+//     }).join('');  // Rejoin the array into a string
+// }
+
+//SOLUTION 2 with regex
+//   var rotCharArray = [];
+//   var regEx = /[A-Z]/ ;
+//   str = str.split("");
+//   for (var x in str) {
+//     if (regEx.test(str[x])) {
+//       // A more general approach
+//       // possible because of modular arithmetic
+//       // and cyclic nature of rot13 transform
+//       rotCharArray.push((str[x].charCodeAt() - 65 + 13) % 26 + 65);
+//     } else {
+//       rotCharArray.push(str[x].charCodeAt());
+//     }
+//   }
+//   str = String.fromCharCode.apply(String, rotCharArray);
+//   return str;
+
+//SOLUTION 3 using a lot of methods
+// function rot13(str) {
+//   return str.replace(/[A-Z]/g, (L) => String.fromCharCode(65 + (L.charCodeAt(0) - 65 + 13) % 26));
+// }
+
+
+
+// var ascii = [65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95];
+//   var shifted = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+//   var original = ['N','O','P','Q','R','S','T','U','V','W','X','Y','Z','A','B','C','D','E','F','G','H','I','J','K','L','M'];
+rot13("SERR PBQR PNZC");
+
+</script>
+</body>
+</html>

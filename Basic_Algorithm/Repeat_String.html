@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 using if else and the repeat method
+// function repeatStringNumTimes(str, num) {
+//   if(num > 0){
+//     return str.repeat(num);
+//   }
+//   else{
+//     return "";
+//   }
+// }
+
+//SOLUTION 2 using two ternary operators
+// function repeatStringNumTimes(str, num){
+//   return num > 0 ? str.repeat(num) : num < 0 ? "" : "idk";
+// }
+
+//SOLUTION 3 using a while loop
+// function repeatStringNumTimes(str, num){
+//   var empty = "";
+//   while(num > 0){
+    //iteration 1 abc += ""          num 3
+    //iteration 2 abc += "abc"       num 2
+    //iteration 3 abc += "abcabc"    num 1
+    //iteration 4 abc += "abcabcabc" num 0 FINISH
+//     empty += str;
+//     num--;
+//   }
+//   return empty;
+// }
+
+//SOLUTION 4 using a for loop
+// function repeatStringNumTimes(str, num){
+//   var empty = "";
+//   for(var i = 0; num > i; i++){
+//     empty += str;
+//   }
+//   return empty;
+// }
+
+//SOLUTION 5 recursion
+// function repeatStringNumTimes(str, num) {
+//   if(num < 0)
+//     return "";
+//   if(num === 1)
+//     return str;
+//   else
+//     return str + repeatStringNumTimes(str, num - 1);
+//iteration 1    "abc"               "abc" 3 - 1
+//iteration 2    "abcabc"            "abc" 2 - 1
+//iteration 3    "abcabcabc"         "abc" 1 - 1 
+//iteration 4    "abc"               "abc" 0 - 1 EMPTY STACK
+//}
+repeatStringNumTimes("abc", 3);
+
+</script>
+</body>
+</html>

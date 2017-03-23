@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 using for loops and if statement
+// function diffArray(arr1, arr2) {
+//   var newArr = [];  
+//   for(var elem in arr2){
+//     if(arr1.indexOf(arr2[elem]) === -1){
+//       newArr.push(arr2[elem]);
+//     }
+//   }
+//   for(var item in arr1){
+//     console.log("loop: " + arr1[item]);
+//     if(arr2.indexOf(arr1[item]) === -1){
+//       newArr.push(arr1[item]);
+//     }
+//   }
+//   console.log("returned: " + newArr);
+//   return newArr;
+// }
+  
+//SOLUTION 2 inner function and outer function(I don't remember the name of the values from various functions playing with each other) and I think is recursive? I don't know why Im am doubting
+// function filtering(i){
+//   return arr1[i] != arr2[i];
+//   function diffArray(arr1,arr2){
+//     return filtering;
+//   }
+// }
+
+//SOLUTION 3 if else statement with filter, is maybe the same as SOLUTION 1
+// function diff(arr1, arr2) {
+//   var newArr = arr1.concat(arr2);
+//   function check(item) {
+//     if (arr1.indexOf(item) === -1 || arr2.indexOf(item) === -1) {
+//       return item;
+//     }
+//   }
+//   return newArr.filter(check);
+// }
+  
+  
+  // Same, same; but different.
+  /*for(var i = 0; i < arr1.length; i++)
+{
+	console.log(arr1[i]);
+}
+for(var j = 0; j < arr2.length; j++)
+{
+	console.log(arr2[j]);
+}
+if(arr1[i] != arr2[j])
+{
+	newArr.push(arr2.slice(arr2[j],arr2.length - 1));	
+}
+console.log(newArr);
+
+newArr.push(arr2.slice(arr2.length[3], arr2.length[3] + 1));
+}*/
+
+diffArray([1, 2, 3, 5], [1, 2, 3, 4, 5]);
+
+</script>
+</body>
+</html>

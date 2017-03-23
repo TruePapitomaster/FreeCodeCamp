@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 using regex and a lot of methods
+// function titleCase(str) {
+//   return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+//   }
+
+//SOLUTION 2 using a lot of methods with a for loop
+// function titleCase(str){
+// var procedure = str.toLowerCase().split(' '),
+//     i = 0;
+//   for(;i < procedure.length; i++){
+//     procedure[i] = procedure[i].charAt(0).toUpperCase() + procedure[i].slice(1);
+// //    i'm'[0] =      i'm[0].       [0].       I                I      .   'm
+// //       a[1] =        a[1].       [0].       A                A      
+//   }
+//   return procedure.join(' ');
+// }
+
+//SOLUTION 3 using map function and a lot of methods
+// function titleCase(str) {
+//   return str.toLowerCase().split(' ').map(function(word) {
+//     return (word.charAt(0).toUpperCase() + word.slice(1));
+//     //           i'm      .    I'm             I   +  'm    return    I'm 
+//   }).join(' ');
+//}
+
+//SOLUTION 4 using map with a different function
+// function titleCase(str) {
+//   return str.toLowerCase().split(' ').map(function(word) {
+//     return word.replace(word[0], word[0].toUpperCase());
+//   }).join(' ');
+// }
+
+//SOLUTION 5 using ASCII code and without methods
+titleCase("I'm a little tea pot");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// var upper_alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M',
+//                       'N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+// var lower_alphabet = [' a',' b',' c',' d',' e',' f',' g',' h',' i',' j',' k',' l',' m',
+//                        ' n',' o',' p',' q',' r',' s',' t',' u',' v',' w',' x',' y',' z'];
+
+</script>
+</body>
+</html>

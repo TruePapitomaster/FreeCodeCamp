@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//SOLUTION 1 for loop
+// function factorialize(num) {
+//   var factorial = 1;
+//   for(var i = 1; i <= num; i++){
+//     factorial *= i;
+//   }
+//   return factorial;
+// }
+
+//SOLUTION 2 while loop
+// function factorialize(num){
+//   var factorial = 1, i = 1;
+//   while(i <= num){
+//     factorial *= i;
+//     i++;
+//   }
+//   return factorial;
+// }
+
+//SOLUTION 3 recursion
+// function factorialize(num){
+//   if(num === 0){ 
+//     return 1; 
+//   } return num * factorialize(num - 1); 
+// }
+
+//SOLUTION 5 recursion with ternary operator
+// function fact(acc, num) {
+//   return num > 1 ? fact(acc * num, num - 1): acc;
+// }
+
+//SOLUTION 4 array methods
+// function factorialize(num){
+// var positiveIntegers = []; 
+//   if(num === 0){
+//     return 1;
+//   }
+//   for(var i = 1; i<= num; i++)
+//   { 
+//     positiveIntegers.push(i);
+//   } 
+//   return positiveIntegers.reduce(function(positiveIntegers, num){ 
+//   return positiveIntegers * num; 
+//   });
+// }
+
+//SOLUTION 6 half for loop
+// this technique will reduce the number of times you have to multiply by a factor of 2
+// not a huge deal, but still fun to think about
+// basically, if you are doing 4! = 4 * 3 * 2 * 1
+// here, you do 4! = (4*1) * (3*2)
+// theoretically you're multiplying the same number of times
+// but you reduce your loop by half
+// function factorial(num) {
+//     var sum = 1;
+// //i es una instancia de num
+// //j es la variable de conteo en el iterador
+// //i > num divide la instancia de num a la mitad
+// //--i decrementa de manera pre
+// //++j incrementa de manera pre
+//     for(var i = num, j = 1; i > num/2; --i, ++j){ //sum *= i       i === j             sum *= i * j
+//       //    i = 4,   j = 1, 4 > 4/2,   --3, ++2       1 *= 3 = 3   3 === 2 = false       3 *= 3 * 2 = 9
+//       //    i = 3,   j = 2, 3 > 4/2,   --2, ++3       9 *= 2 = 18  2 === 3 = false      18 *= 2 * 3 = 108 
+//       //    i = 2,   j = 3, 2 > 4/2,   --1, ++4      12 *= 1 = 12  1 === 4 = false      12 *= 1 * 4 = 48
+//       //    i = 1,   j =
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+//       //       .
+      
+//         //en el primer if compara i y j al igual que el tipo de dato sea igual
+//         if (i === j) {
+//             //sum siendo 1 se multiplica por la instancia de num
+//             sum *= i;
+//             //se realiza el proceso y se salta con break
+//             break;
+//         }
+//         //sum es despues multiplicada por 1 y j al ser multiplicadas estas mismas
+//         sum *= i*j;
+//     }
+//     return sum;
+// }
+
+//SOLUTION 7 This is not mine, using ES6, WEIRD STUFF
+// function factorial(num) {
+//   return Array.apply(null, {length: n}).map((_, i) => i+1).reduce((a, b) => a*b, 1);
+// }
+
+// factorialize(5);
+
+</script>
+</body>
+</html>

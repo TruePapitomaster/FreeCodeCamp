@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 using methods
+// function getIndexToIns(arr, num) {
+// arr.push(num);
+// var sortedarr = arr.sort(function(a,b){return a-b;});
+// var wheresarr = sortedarr.indexOf(num);
+// return wheresarr;
+// }
+
+//SOLUTION 2 for loop if statement
+// function getIndexToIns(arr, num) {
+//   arr.sort(function(a, b) {
+//     return a - b;
+//   });
+//   for (var a = 0; a < arr.length; a++) {
+//     if (arr[a] >= num)
+//       return parseInt(a);
+//   }
+//   return arr.length;
+// }
+
+//SOLUTION 3 with ES and ternary operator
+// function getIndexToIns(arr, num) {
+//   var index = arr.sort((curr, next) => curr > next)
+//     .findIndex((currNum)=> num <= currNum);
+//   return index === -1 ? arr.length : index;
+// }
+getIndexToIns([40, 60], 50);
+
+</script>
+</body>
+</html>

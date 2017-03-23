@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+//SOLUTION 1 using only if else and methods
+// function confirmEnding(str, target) {
+//   var length = target.length;
+//   // "Never give up and good luck will find you."
+//   if(str.substr(-length) == target){
+//   // -- Falcor
+//   return true;
+//   }
+//   else{
+//     return false;
+//   }
+// }
+
+//SOLUTION 2 using substr and ternary operator
+// function confirmEnding(str, target){
+//   return str.substr(-target.length, str.length) == target ? true : false;
+// }
+
+//SOLUTION 3 using substring
+function confirmEnding(str, target){
+  return str.substring(str.length - target.length) == target ? true : false;
+}
+
+//SOLUTION 4 using ends with method(is not a valid solution in FreeCodeCamp, but it works)
+// function confirmEnding(str, target){
+//   return str.endsWith(target);
+// }
+
+
+confirmEnding("He has to give me a new name", "name");
+</script>
+</body>
+</html>

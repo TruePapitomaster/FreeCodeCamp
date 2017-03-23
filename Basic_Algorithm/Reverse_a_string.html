@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+/*SOLUTION 1
+USING A FOR LOOP WITH INCREMENT
+var str = "hello", empty = [], i = 0;
+for(i; i < str.length; i++){
+	empty.push(str[i]);
+}
+console.log(empty.reverse().join(''));
+*/
+
+/*SOLUTION 2
+USING A FOR LOOP WITH DECREMENT WITHOUT METHODS
+var str = "hello", i = str.length - 1, empty = [];
+for(i; i >= 0; i--){
+	empty.push(str[i]);
+}
+console.log(empty.join(''));
+*/
+
+/*SOLUTION 3
+USING A WHILE LOOP
+var str = "hello", i = 0; empty = [];
+while(i < str.length){
+	empty.push(str[i]);
+	i++;
+}
+console.log(empty.reverse().join(''));
+*/
+
+/*SOLUTION 4
+USING A WHILE LOOP WHITOUT METHODS
+var str = "hello", i = str.length - 1; empty = '';
+while(i >= 0){
+	empty += str[i];
+	i--; 
+}
+console.log(empty);
+/*
+
+/*SOLUTON 5
+USING A LOT OF METHODS
+var str = "hello";
+console.log(str.split('').reverse().join(''));
+*/
+
+/*SOULTION 6 
+USING A LOT OF METHODS AND IN ONE LINE :v
+function reverseString(str){ return str.split('').reverse().join(''); } reverseString("hello");
+*/
+
+/*SOULTION 7 
+USING RECURSION
+function reverseString(str) {
+	return (str === '') ? '' : reverseString(str.substr(1)) + str.charAt(0);
+	}
+	reverseString('hello');
+*/
+
+/*SOLUTION 8 
+USING HALF INDEX SWITCH FOR LOOP
+function reverse(s) {
+	s = s.split('');
+	var len = s.length,
+		halfIndex = Math.floor(len / 2) - 1,
+		tmp;
+	for(var i = 0; i <= halfIndex; i++){
+		tmp = s[len - i - 1];
+		s[len - i - 1] = s[i];
+		s[i] = tmp;
+	}
+	return s.join('');
+}
+*/
+
+/*SOLUTION 9
+HALF INDEX RECURSION
+function reverse(s) {
+  if (s.length < 2)
+    return s;
+  var halfIndex = Math.ceil(s.length / 2);
+  return reverse(s.substr(halfIndex)) +
+         reverse(s.substr(0, halfIndex));
+}
+*/
+
+/*SOLUTION 10
+INTERNAL FUNCTION RECURSION
+function reverse(s) {
+  function rev(s, len, o) {
+    return (len === 0) ? o : rev(s, --len, (o += s[len]));
+  };
+  return rev(s, s.length, '');
+}
+*/
+
+/*SOLUTION 11
+SINGLE FOR LOOP DECLARATION WITH CONCATENATION
+function reverse(s) {
+  for (var i = s.length - 1, o = ''; i >= 0; o += s[i--]) { }
+  return o;
+}
+*/
+
+</script>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+//SOLUTION 1 inner and outer for loops
+// function largestOfFour(arr) {  
+//   var largest = [0, 0, 0, 0];
+//   for(var i = 0; i < arr.length; i++){  
+//     for(var j = 0; j < arr[i].length; j++){  
+//       if(largest[i] < arr[i][j]){
+//         largest[i] = arr[i][j];
+//       } 
+//     }
+//   }
+//   return largest;
+// }
+
+//SOLUTION 2 using a outer while loop and a inner for loop
+// function largestOfFour(arr){
+//   var largest = [0,0,0,0],
+//       i = 0,
+//       j = 0;
+//   while(i < arr.length){
+//     for(; j < arr[i].length; j++){
+//       if(largest[i] < arr[i][j]){
+//         largest[i] = arr[i][j];
+//       }
+//     }
+//     i++;
+//   }
+//   return largest;
+// }
+
+
+largestOfFour([[4, 5, 1, 3], [13, 27, 18, 26], [32, 35, 37, 39], [1000, 1001, 857, 1]]);
+
+</script>
+</body>
+</html>
